@@ -153,4 +153,7 @@ public class EditorPreferenceNames {
 	 * </p>
 	 */
 	public final static String SEMANTIC_HIGHLIGHTING = "semanticHighlighting"; //$NON-NLS-1$
+	
+	
+	public final static String DRAG_AND_DROP_TEXT = "dragAndDropText"; //$NON-NLS-1$
 }

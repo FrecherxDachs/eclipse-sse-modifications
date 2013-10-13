@@ -161,6 +161,9 @@ public class StructuredTextEditorPreferencePage extends PreferencePage implement
 		
 		label = SSEUIMessages.StructuredTextEditorPreferencePage_1;
 		addCheckBox(appearanceComposite, label, EditorPreferenceNames.SEMANTIC_HIGHLIGHTING, 0);
+		
+		label = SSEUIMessages.StructuredTextEditorPreferencePage_45;
+		addCheckBox(appearanceComposite, label, EditorPreferenceNames.DRAG_AND_DROP_TEXT, 0);
 
 		Label l = new Label(appearanceComposite, SWT.LEFT);
 		GridData gd = new GridData(GridData.HORIZONTAL_ALIGN_FILL);
@@ -298,6 +301,7 @@ public class StructuredTextEditorPreferencePage extends PreferencePage implement
 		overlayKeys.add(new OverlayPreferenceStore.OverlayKey(OverlayPreferenceStore.BOOLEAN, AbstractStructuredFoldingStrategy.FOLDING_ENABLED));
 		
 		overlayKeys.add(new OverlayPreferenceStore.OverlayKey(OverlayPreferenceStore.BOOLEAN, EditorPreferenceNames.SEMANTIC_HIGHLIGHTING));
+		overlayKeys.add(new OverlayPreferenceStore.OverlayKey(OverlayPreferenceStore.BOOLEAN, EditorPreferenceNames.DRAG_AND_DROP_TEXT));
 
 		overlayKeys.add(new OverlayPreferenceStore.OverlayKey(OverlayPreferenceStore.STRING, EditorPreferenceNames.CODEASSIST_PROPOSALS_BACKGROUND));
 		overlayKeys.add(new OverlayPreferenceStore.OverlayKey(OverlayPreferenceStore.STRING, EditorPreferenceNames.CODEASSIST_PROPOSALS_FOREGROUND));

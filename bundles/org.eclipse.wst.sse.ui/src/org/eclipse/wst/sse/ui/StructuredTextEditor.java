@@ -2524,6 +2524,16 @@ public class StructuredTextEditor extends TextEditor {
 				}
 			}
 		}
+		
+		else if (EditorPreferenceNames.DRAG_AND_DROP_TEXT.equals(property)) {
+		  if (event.getNewValue() != null && event.getNewValue() instanceof Boolean) {
+		    if (Boolean.TRUE.equals(event.getNewValue())) {
+		      installTextDragAndDrop(getSourceViewer());
+		    } else {
+		      uninstallTextDragAndDrop(getSourceViewer());
+		    }
+		  }
+		}
 
 		// update content assist preferences
 		else if (EditorPreferenceNames.CODEASSIST_PROPOSALS_BACKGROUND.equals(property)) {
@@ -2728,6 +2738,11 @@ public class StructuredTextEditor extends TextEditor {
 		if (isFoldingEnabled()) {
 			installProjectionSupport();
 		}
+		
+		IPreferenceStore store = getPreferenceStore();
+		if (store.getBoolean(EditorPreferenceNames.DRAG_AND_DROP_TEXT)) {
+		  installTextDragAndDrop(getSourceViewer());
+		}
 	}
 
 	protected void initSourceViewer(StructuredTextViewer sourceViewer) {
@@ -2737,6 +2752,7 @@ public class StructuredTextEditor extends TextEditor {
 
 	protected void installTextDragAndDrop(ISourceViewer viewer) {
 		// do nothing
+	  super.installTextDragAndDrop(viewer);
 	}
 
 	/*
@@ -3072,6 +3088,7 @@ public class StructuredTextEditor extends TextEditor {
 	}
 
 	protected void uninstallTextDragAndDrop(ISourceViewer viewer) {
+	  super.uninstallTextDragAndDrop(viewer);
 		// do nothing
 	}
 

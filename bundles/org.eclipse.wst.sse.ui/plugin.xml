@@ -186,6 +186,12 @@
 			categoryId="org.eclipse.ui.category.edit"
 			id="org.eclipse.wst.sse.ui.open.file.from.source">
 		</command>
+		<command
+			name="%command.open.file.from.source.name"
+			description="%command.open.file.from.source.description"
+			categoryId="org.eclipse.ui.category.edit"
+			id="org.eclipse.wst.sse.ui.open.file.from.sourceex">
+		</command>
       <command
             name="%ActionDefinition.gotoMatchingBracket.name"
             description="%ActionDefinition.gotoMatchingBracket.description"
@@ -338,7 +344,7 @@
 		<key
 			sequence="F3"
 			contextId="org.eclipse.wst.sse.ui.structuredTextEditorScope"
-			commandId="org.eclipse.wst.sse.ui.open.file.from.source"
+			commandId="org.eclipse.wst.sse.ui.open.file.from.sourceex"
 			schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
 		</key>
 		<key
